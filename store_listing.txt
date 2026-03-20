@@ -8,7 +8,7 @@ Snap photos to track calories. AI coach, fasting & macro tracker for weight loss
 
 FULL DESCRIPTION (Max 4000 chars)
 ---------------------------------
-Transform your health journey with CalView AI, the smartest calorie counter and nutrition tracker powered by advanced artificial intelligence. Whether you want to lose weight, gain muscle, or simply eat healthier, CalView AI makes tracking effortless. Forget manual entry—just snap a photo, and let our AI Food Scanner analyze your meal instantly.
+Transform your health journey with Cal Trek, the smartest calorie counter and nutrition tracker powered by advanced artificial intelligence. Whether you want to lose weight, gain muscle, or simply eat healthier, Cal Trek makes tracking effortless. Forget manual entry—just snap a photo, and let our AI Food Scanner analyze your meal instantly.
 
 Key Features:
 
@@ -34,15 +34,15 @@ Key Features:
 • Streak Protection: Keep your momentum going with Streak Freezes for those busy days.
 
 🌟 Premium Features
-Unlock the full potential of CalView AI:
+Unlock the full potential of Cal Trek:
 • Voice Logging: Log meals hands-free with voice commands.
 • Deep Insights: Advanced analytics on your nutrient trends.
 • Unlimited AI Analysis: Scan as many meals as you want without limits.
 • Exclusive Challenges: Compete in premium-only social leaderboards.
 
-Why Choose CalView AI?
+Why Choose Cal Trek?
 • Effortless: The fastest way to log meals using just your camera.
 • Intelligent: More than just a logger, it's a coach that understands your habits.
 • Complete: Calorie counting, fasting, water, and macros in one beautiful app.
 
-Download CalView AI today and reach your fitness goals faster with the power of AI nutrition tracking!
+Download Cal Trek today and reach your fitness goals faster with the power of AI nutrition tracking!

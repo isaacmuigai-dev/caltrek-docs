@@ -1,14 +1,14 @@
-# Privacy Policy for CalViewAI
+# Privacy Policy for Cal Trek
 
 **Last updated: January 08, 2026**
 
-This Privacy Policy describes how CalViewAI ("we", "us", or "our") collects, uses, and shares your personal information when you use our mobile application (the "App").
+This Privacy Policy describes how Cal Trek ("we", "us", or "our") collects, uses, and shares your personal information when you use our mobile application (the "App").
 
 ## 1. Information We Collect
 
 ### A. Health Data (via Health Connect)
 
-To provide you with comprehensive health tracking, CalViewAI requests access to data from **Health Connect**. This includes:
+To provide you with comprehensive health tracking, Cal Trek requests access to data from **Health Connect**. This includes:
 
 - **Steps**: To track your daily activity.
 - **Calories Burned**: To estimate your energy expenditure (Active and Total).

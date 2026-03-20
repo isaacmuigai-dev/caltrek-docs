@@ -1,8 +1,8 @@
-# Terms of Service for CalViewAI
+# Terms of Service for Cal Trek
 
 **Last updated: January 08, 2026**
 
-Please read these Terms of Service ("Terms") carefully before using the CalViewAI mobile application (the "App") operated by us.
+Please read these Terms of Service ("Terms") carefully before using the Cal Trek mobile application (the "App") operated by us.
 
 ## 1. Acceptance of Terms
 
@@ -12,7 +12,7 @@ By accessing or using the App, you agree to be bound by these Terms. If you disa
 
 - **Eligibility**: You must be at least 13 years old to use the App.
 - **Account**: You are responsible for maintaining the confidentiality of your account and for all activities that occur under it.
-- **Health Disclaimer**: CalViewAI is not a medical device. The data and insights provided (including calorie counts, BMR, and BMI) are for informational purposes only and should not replace professional medical advice. Always consult with a healthcare provider before starting any diet or exercise program.
+- **Health Disclaimer**: Cal Trek is not a medical device. The data and insights provided (including calorie counts, BMR, and BMI) are for informational purposes only and should not replace professional medical advice. Always consult with a healthcare provider before starting any diet or exercise program.
 
 ## 3. User Content
 
@@ -32,7 +32,7 @@ We may terminate or suspend your access to the App immediately, without prior no
 
 ## 6. Limitation of Liability
 
-In no event shall CalViewAI, nor its developers, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the App.
+In no event shall Cal Trek, nor its developers, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the App.
 
 ## 7. Changes
 
