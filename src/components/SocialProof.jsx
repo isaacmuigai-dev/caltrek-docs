@@ -1,78 +1,80 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Star } from 'lucide-react';
+import { Star, ShieldCheck, Zap } from 'lucide-react';
 
 const SocialProof = () => {
   const stats = [
-    { label: "Active Users", value: "10K+" },
-    { label: "Meals Tracked", value: "1.2M" },
-    { label: "Avg. Weight Loss", value: "12 lbs" },
-    { label: "App Store Rating", value: "4.9/5" },
+    { label: "Active Users", value: "10K+", icon: <ShieldCheck size={16} /> },
+    { label: "Meals Tracked", value: "1.2M", icon: <Zap size={16} /> },
+    { label: "App Rating", value: "4.9/5", icon: <Star size={16} fill="currentColor" /> },
   ];
 
   const testimonials = [
     {
       name: "Marcus J.",
-      role: "Gym Enthusiast",
-      text: "Cal Trek changed the game for me. I used to hate manual logging, now I just take a photo and get back to my workout.",
-      avatar: "https://i.pravatar.cc/100?img=12"
+      handle: "@marcusfit",
+      text: "Cal Trek is actually magic. I just snap a photo of my meal and it does the rest. No more manual searching.",
+      avatar: "https://i.pravatar.cc/100?u=marcus"
     },
     {
       name: "Sarah L.",
-      role: "Weight Loss Journey",
-      text: "Lost 15 lbs in 2 months. The streaks kept me consistent when I wanted to quit. Highly recommended!",
-      avatar: "https://i.pravatar.cc/100?img=25"
+      handle: "@sarah_wellness",
+      text: "The cleanest UI I've seen. It makes tracking feel premium, not a chore. Lost 10lbs in my first month!",
+      avatar: "https://i.pravatar.cc/100?u=sarah"
     },
     {
       name: "David K.",
-      role: "Tech Professional",
-      text: "The cleanest UI I've seen in a fitness app. The AI recognition is spooky accurate. It's like magic.",
-      avatar: "https://i.pravatar.cc/100?img=33"
+      handle: "@techdavid",
+      text: "As a dev, I appreciate the accuracy of the AI. It identified my complex home-cooked bowls with 98% precision.",
+      avatar: "https://i.pravatar.cc/100?u=david"
     }
   ];
 
   return (
-    <section className="py-20 bg-gray-900/30">
+    <section id="results" className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-6">
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-24 border-y border-white/5 py-12">
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="text-center"
-            >
-              <div className="text-3xl lg:text-4xl font-extrabold text-white mb-2">{stat.value}</div>
-              <div className="text-sm font-bold text-primary uppercase tracking-tighter opacity-70">{stat.label}</div>
-            </motion.div>
+        <div className="flex flex-col items-center mb-20 text-center">
+          <div className="flex -space-x-3 mb-6">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <img 
+                key={i} 
+                src={`https://i.pravatar.cc/100?u=user${i}`} 
+                className="w-12 h-12 rounded-full border-4 border-white shadow-sm" 
+                alt="user" 
+              />
+            ))}
+          </div>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-4">
+            Join the <span className="text-blue-600">elite league</span> of trackstars.
+          </h2>
+          <p className="text-xl text-gray-400 font-medium">10,000+ people are transforming their lives with Cal Trek.</p>
+        </div>
+
+        {/* Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+          {stats.map((stat, i) => (
+            <div key={i} className="glass p-8 rounded-[2rem] flex flex-col items-center text-center">
+              <div className="text-blue-600 mb-4">{stat.icon}</div>
+              <div className="text-4xl font-black tracking-tighter mb-2">{stat.value}</div>
+              <div className="text-gray-400 font-bold uppercase text-[10px] tracking-widest">{stat.label}</div>
+            </div>
           ))}
         </div>
 
-        {/* Testimonials */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((item, index) => (
+        {/* Testimonials Marquee-like grid */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {testimonials.map((item, i) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="p-8 rounded-3xl bg-gray-950 border border-white/5 relative group hover:border-primary/30 transition-all"
+              key={i}
+              whileHover={{ y: -5 }}
+              className="p-8 rounded-[2.5rem] bg-gray-50 border border-black/5 flex flex-col justify-between"
             >
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={14} className="fill-accent text-accent" />
-                ))}
-              </div>
-              <p className="text-gray-300 italic mb-6 leading-relaxed">"{item.text}"</p>
+              <p className="text-lg font-bold text-gray-900 leading-tight mb-8">"{item.text}"</p>
               <div className="flex items-center gap-4">
-                <img src={item.avatar} alt={item.name} className="w-12 h-12 rounded-full grayscale group-hover:grayscale-0 transition-all border border-white/10" />
+                <img src={item.avatar} alt={item.name} className="w-12 h-12 rounded-full border border-black/10" />
                 <div>
-                  <div className="text-sm font-bold text-white">{item.name}</div>
-                  <div className="text-xs text-gray-500 font-medium">{item.role}</div>
+                  <div className="text-sm font-black text-black">{item.name}</div>
+                  <div className="text-xs font-bold text-gray-400">{item.handle}</div>
                 </div>
               </div>
             </motion.div>

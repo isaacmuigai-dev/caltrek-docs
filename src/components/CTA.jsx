@@ -1,45 +1,48 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, Apple, PlayCircle } from 'lucide-react';
+import { Apple, PlayCircle, ShieldCheck } from 'lucide-react';
 
 const CTA = () => {
   return (
-    <section className="py-32 relative overflow-hidden">
-      {/* Background Decorative Circles */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/5 rounded-full -z-10" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/5 rounded-full -z-10 animate-pulse" />
+    <section id="download" className="py-40 relative bg-white overflow-hidden">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-blue-50/50 rounded-full blur-[120px] -z-10" />
       
       <div className="container mx-auto px-6 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="text-5xl lg:text-7xl font-black mb-8 leading-tight">
-            Stop guessing. <br />
-            <span className="text-gradient">Start winning.</span>
+          <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-gray-50 border border-black/5 text-gray-900 mb-8">
+            <ShieldCheck size={16} className="text-blue-600" />
+            <span className="text-xs font-black uppercase tracking-widest tracking-widest">JOIN THE REVOLUTION</span>
+          </div>
+          
+          <h2 className="text-6xl md:text-8xl font-black mb-8 leading-[0.9] tracking-tighter text-black">
+            Ready to <span className="text-blue-600">own</span> <br />
+            your health?
           </h2>
-          <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto italic">
-            Join 10,000+ others who have transformed their lives with Cal Trek. The only AI that understands your plate.
+          <p className="text-xl md:text-2xl text-gray-400 mb-16 max-w-2xl mx-auto font-medium leading-relaxed italic">
+            "Stop guessing what's in your bowl. Start winning your day with the world's most intuitive AI tracker."
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <button className="w-full sm:w-auto px-10 py-5 bg-primary hover:bg-primary-light text-gray-950 font-black text-lg rounded-2xl flex items-center justify-center gap-3 shadow-[0_20px_40px_rgba(34,197,94,0.3)] transition-all hover:-translate-y-1 hover:shadow-primary/40">
-              <Apple size={24} className="fill-gray-950" />
-              Download on App Store
+            <button className="w-full sm:w-auto px-12 py-6 bg-black text-white font-black text-xl rounded-3xl flex items-center justify-center gap-4 shadow-2xl transition-all transform hover:-translate-y-2 hover:bg-neutral-800">
+              <Apple size={28} fill="white" />
+              App Store
             </button>
-            <button className="w-full sm:w-auto px-10 py-5 bg-white/5 hover:bg-white/10 text-white font-black text-lg rounded-2xl border border-white/10 flex items-center justify-center gap-3 backdrop-blur-xl transition-all hover:-translate-y-1">
-              <PlayCircle size={24} />
-              Get on Google Play
+            <button className="w-full sm:w-auto px-12 py-6 bg-white border-2 border-black text-black font-black text-xl rounded-3xl flex items-center justify-center gap-4 transition-all transform hover:-translate-y-2 hover:bg-gray-50">
+              <PlayCircle size={28} />
+              Play Store
             </button>
           </div>
           
-          <div className="mt-16 pt-12 border-t border-white/5 flex flex-wrap items-center justify-center gap-8 opacity-40 grayscale">
-             <div className="text-xl font-bold">Health Connect</div>
-             <div className="text-xl font-bold italic">Apple Health</div>
-             <div className="text-xl font-bold tracking-tighter uppercase">MyFitnessPal Sync</div>
-             <div className="text-xl font-bold">Strava</div>
+          <div className="mt-24 pt-12 border-t border-black/5 flex flex-wrap items-center justify-center gap-12 opacity-30 grayscale contrast-125">
+             <div className="text-2xl font-black tracking-tight">Health Connect</div>
+             <div className="text-2xl font-black tracking-tighter italic">APPLE HEALTH</div>
+             <div className="text-2xl font-black uppercase tracking-tighter">MyFitnessPal Sync</div>
+             <div className="text-2xl font-black tracking-widest">STRAVA</div>
           </div>
         </motion.div>
       </div>

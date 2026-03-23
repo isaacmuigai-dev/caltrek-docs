@@ -1,92 +1,88 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, useScroll, useTransform, useElementScroll } from 'framer-motion';
 import { Scan, Brain, Award, TrendingUp, Zap, Target } from 'lucide-react';
 
 const Features = () => {
+  const [activeFeature, setActiveFeature] = useState(0);
+
   const features = [
     {
-      icon: <Scan className="text-primary" />,
       title: "AI Food Recognition",
       description: "Just point your camera. Our advanced neural network identifies 5,000+ foods instantly with 98% accuracy.",
-      color: "from-primary/20 to-transparent"
+      image: "/assets/scanner.png",
+      icon: <Scan className="text-blue-500" />
     },
     {
-      icon: <Brain className="text-indigo-400" />,
-      title: "Smart Insights",
-      description: "Personalized nutrition advice based on your metabolism, activity levels, and fitness goals.",
-      color: "from-indigo-500/10 to-transparent"
+      title: "Real-time Macro Breakdown",
+      description: "Get detailed protein, carb, and fat analyses formatted specifically to help you reach your daily goals.",
+      image: "/assets/dashboard.png",
+      icon: <Zap className="text-yellow-500" />
     },
     {
-      icon: <Award className="text-amber-400" />,
-      title: "Gamified Streaks",
-      description: "Stay motivated with daily streaks, levels, and rewards for consistent tracking habits.",
-      color: "from-amber-500/10 to-transparent"
-    },
-    {
-      icon: <TrendingUp className="text-rose-400" />,
-      title: "Visual Progress",
-      description: "Beautiful charts that make complex data simple to understand. See your transformation happen.",
-      color: "from-rose-500/10 to-transparent"
-    },
-    {
-      icon: <Zap className="text-sky-400" />,
-      title: "High Performance",
-      description: "Built for speed. No lag, no waiting. Experience the fastest calorie tracking in the industry.",
-      color: "from-sky-500/10 to-transparent"
-    },
-    {
-      icon: <Target className="text-purple-400" />,
-      title: "Macro Accuracy",
-      description: "Get detailed breakdowns of proteins, fats, and carbs for every meal with medical-grade precision.",
-      color: "from-purple-500/10 to-transparent"
+      title: "Progress Visualization",
+      description: "Track your transformation with beautiful, data-rich charts and a personalized goal journey.",
+      image: "/assets/progress.png",
+      icon: <TrendingUp className="text-purple-500" />
     }
   ];
 
   return (
-    <section id="features" className="py-24 relative">
+    <section id="features" className="py-32 bg-white">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-20">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl lg:text-5xl font-bold mb-6"
-          >
-            Features built for <br />
-            <span className="text-primary">your success.</span>
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-gray-400 max-w-2xl mx-auto text-lg"
-          >
-            We've combined world-class AI with premium design to create a tracking experience that's actually enjoyable.
-          </motion.p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -8 }}
-              className={`p-8 rounded-[2rem] bg-gray-900/50 border border-white/5 hover:border-primary/20 transition-all group relative overflow-hidden`}
-            >
-              <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-100 transition-opacity`} />
+        <div className="grid lg:grid-cols-2 gap-24 items-start">
+          {/* Left: Sticky Mockup */}
+          <div className="hidden lg:block sticky top-32 h-[700px] flex items-center justify-center">
+            <div className="relative w-full max-w-[340px]">
+              <div className="absolute inset-0 bg-blue-100/30 blur-[100px] rounded-full -z-10" />
               
-              <div className="w-14 h-14 rounded-2xl bg-gray-950 flex items-center justify-center mb-6 shadow-xl border border-white/5 group-hover:scale-110 transition-transform relative z-10">
-                {feature.icon}
+              <div className="relative bg-neutral-900 rounded-[3.5rem] p-3 shadow-2xl border-[8px] border-neutral-800 transition-all duration-500">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-neutral-800 rounded-b-2xl z-20" />
+                <div className="rounded-[2.8rem] overflow-hidden bg-white aspect-[9/19.5] relative">
+                  {features.map((feature, index) => (
+                    <motion.img
+                      key={index}
+                      src={feature.image}
+                      alt={feature.title}
+                      initial={{ opacity: 0, scale: 1.1 }}
+                      animate={{ 
+                        opacity: activeFeature === index ? 1 : 0,
+                        scale: activeFeature === index ? 1 : 1.1,
+                      }}
+                      transition={{ duration: 0.5 }}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  ))}
+                </div>
               </div>
-              
-              <h3 className="text-xl font-bold mb-3 text-white relative z-10">{feature.title}</h3>
-              <p className="text-gray-400 leading-relaxed relative z-10">{feature.description}</p>
-            </motion.div>
-          ))}
+            </div>
+          </div>
+
+          {/* Right: Scrolling Feature Cards */}
+          <div className="space-y-40 lg:py-40">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                onViewportEnter={() => setActiveFeature(index)}
+                viewport={{ margin: "-40% 0px -40% 0px" }}
+                className="group"
+              >
+                <div className="mb-8 inline-flex items-center justify-center w-16 h-16 rounded-3xl bg-gray-50 text-black shadow-sm group-hover:scale-110 transition-transform">
+                  {feature.icon}
+                </div>
+                <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-6 text-black">
+                  {feature.title}
+                </h2>
+                <p className="text-xl text-gray-500 font-medium leading-relaxed max-w-lg mb-8">
+                  {feature.description}
+                </p>
+                <div className="lg:hidden mt-12 rounded-[2.5rem] overflow-hidden border-8 border-neutral-900 shadow-2xl">
+                  <img src={feature.image} alt={feature.title} className="w-full" />
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

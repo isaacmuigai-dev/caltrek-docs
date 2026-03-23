@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Menu, X, Download } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, Apple } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,58 +16,48 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Features', href: '#features' },
-    { name: 'How it Works', href: '#how-it-works' },
-    { name: 'Transformation', href: '#transformation' },
+    { name: 'Results', href: '#results' },
+    { name: 'App', href: '#download' },
   ];
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? 'py-4 bg-gray-950/80 backdrop-blur-md border-b border-white/5' : 'py-6 bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'py-4 bg-white/80 backdrop-blur-md border-b border-black/5' : 'py-6 bg-transparent'
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="flex items-center gap-2"
+          className="flex items-center gap-3"
         >
-          <div className="w-8 h-8 bg-gradient-to-br from-primary-light to-primary rounded-lg flex items-center justify-center shadow-lg shadow-primary/20">
-            <span className="text-white font-bold text-lg">C</span>
-          </div>
-          <span className="text-xl font-bold tracking-tight text-white italic">Cal <span className="text-primary">Trek</span></span>
+          <img src="/assets/logo.png" className="w-8 h-8 rounded-lg object-contain" alt="Cal Trek" />
+          <span className="text-xl font-black tracking-tighter text-black">CAL TREK</span>
         </motion.div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
-            <motion.a 
+            <a 
               key={link.name}
               href={link.href}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              className="text-sm font-bold text-gray-500 hover:text-black transition-colors tracking-tight"
             >
               {link.name}
-            </motion.a>
+            </a>
           ))}
-          <motion.button
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-5 py-2.5 bg-primary text-gray-950 font-semibold rounded-full text-sm flex items-center gap-2 shadow-lg shadow-primary/20 transition-all hover:bg-primary-light"
-          >
-            <Download size={16} />
-            Download Now
-          </motion.button>
+          <button className="px-6 py-2.5 bg-black text-white font-bold rounded-xl text-sm flex items-center gap-2 transition-all hover:bg-black/80 shadow-lg">
+            <Apple size={18} fill="white" />
+            Get App
+          </button>
         </div>
 
         {/* Mobile Toggle */}
         <div className="md:hidden">
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="text-gray-300 hover:text-white"
+            className="text-black"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -78,24 +68,24 @@ const Navbar = () => {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-gray-900 border-b border-white/5 overflow-hidden"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="absolute top-full left-0 right-0 bg-white border-b border-black/5 overflow-hidden shadow-2xl"
           >
-            <div className="flex flex-col p-6 gap-4">
+            <div className="flex flex-col p-6 gap-6">
               {navLinks.map((link) => (
                 <a 
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-lg font-medium text-gray-400 hover:text-white"
+                  className="text-xl font-bold text-gray-900"
                 >
                   {link.name}
                 </a>
               ))}
-              <button className="mt-2 w-full py-4 bg-primary text-gray-950 font-bold rounded-xl flex items-center justify-center gap-2">
-                <Download size={20} />
+              <button className="w-full py-4 bg-black text-white font-black rounded-2xl flex items-center justify-center gap-2">
+                <Apple size={20} fill="white" />
                 Download Now
               </button>
             </div>
@@ -105,8 +95,5 @@ const Navbar = () => {
     </nav>
   );
 };
-
-// Internal Import helper
-const AnimatePresence = motion.AnimatePresence;
 
 export default Navbar;

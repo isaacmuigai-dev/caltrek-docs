@@ -3,41 +3,49 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #22c55e;
-  --color-accent: #c5b358;
-  --bg-dark: #030712;
-  --bg-card: rgba(17, 24, 39, 0.7);
+  --background: #ffffff;
+  --foreground: #000000;
+  --accent-blue: #4A90E2;
+  --accent-purple: #7B61FF;
 }
 
-* {
-  box-sizing: border-box;
+@layer base {
+  body {
+    @apply bg-white text-black antialiased overflow-x-hidden;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
 }
 
-body {
-  @apply bg-gray-950 text-gray-50 overflow-x-hidden;
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-black/5 shadow-sm;
+  }
+  
+  .glow-blue {
+    background: radial-gradient(circle at center, rgba(74, 144, 226, 0.12) 0%, transparent 70%);
+  }
+  
+  .glow-purple {
+    background: radial-gradient(circle at center, rgba(123, 97, 255, 0.12) 0%, transparent 70%);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 40px rgba(74, 144, 226, 0.3);
+  }
 }
 
-.glass-morphism {
-  @apply bg-opacity-70 backdrop-blur-lg border border-white/10 shadow-2xl;
-  background-color: var(--bg-card);
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
 }
 
-.text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-light via-primary to-accent;
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-transparent;
 }
 
-.bg-gradient-glow {
-  background: radial-gradient(circle at 50% 50%, rgba(34, 197, 94, 0.15), transparent 70%);
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-black/10 rounded-full hover:bg-black/20 transition-colors;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  @apply bg-gray-950;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-gray-800 rounded-full hover:bg-gray-700;
+.sticky-mockup {
+  @apply sticky top-24 h-[600px] w-full max-w-[300px] mx-auto;
 }
