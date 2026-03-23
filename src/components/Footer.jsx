@@ -28,9 +28,9 @@ const Footer = () => {
           <div>
             <h4 className="text-black font-black mb-8 text-xs uppercase tracking-widest">LEGAL</h4>
             <ul className="space-y-4 text-gray-500 text-sm font-bold">
-              <li><a href="#" className="hover:text-black transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-black transition-colors">Terms of Service</a></li>
-              <li><a href="mailto:support@calviewai.com" className="hover:text-black transition-colors">Support</a></li>
+              <li><a href={`${import.meta.env.BASE_URL}privacy_policy.html`} className="hover:text-black transition-colors">Privacy Policy</a></li>
+              <li><a href={`${import.meta.env.BASE_URL}terms_of_service.html`} className="hover:text-black transition-colors">Terms of Service</a></li>
+              <li><a href="mailto:isaacmuigai.dev@gmail.com" className="hover:text-black transition-colors">Support</a></li>
             </ul>
           </div>
         </div>
@@ -44,7 +44,7 @@ const Footer = () => {
              <a href="#" className="text-gray-400 hover:text-black transition-colors"><Instagram size={20} /></a>
              <a href="#" className="text-gray-400 hover:text-black transition-colors"><Twitter size={20} /></a>
              <a href="#" className="text-gray-400 hover:text-black transition-colors"><Github size={20} /></a>
-             <a href="mailto:support@calviewai.com" className="text-gray-400 hover:text-black transition-colors"><Mail size={20} /></a>
+             <a href="mailto:isaacmuigai.dev@gmail.com" className="text-gray-400 hover:text-black transition-colors"><Mail size={20} /></a>
           </div>
         </div>
       </div>
