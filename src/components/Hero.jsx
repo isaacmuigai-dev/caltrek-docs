@@ -75,21 +75,21 @@ const Hero = () => {
             className="relative lg:h-[800px] flex items-center justify-center"
             style={{ perspective: "1000px" }}
           >
-            <div className="relative z-10 w-full max-w-[340px] transform hover:rotate-1 transition-transform duration-700">
+            <div className="relative w-full max-w-[340px] px-4 md:px-0">
+              {/* Decorative Glow */}
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-[3.5rem] blur-2xl opacity-40" />
               
-              {/* iPhone Frame */}
-              <div className="relative bg-neutral-900 rounded-[3rem] p-3 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] border-[6px] border-neutral-800">
+              {/* Phone Mockup */}
+              <div className="relative bg-neutral-900 rounded-[3.5rem] p-3 shadow-2xl border-[8px] border-neutral-800">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-neutral-800 rounded-b-2xl z-20" />
-                <div className="rounded-[2.4rem] overflow-hidden bg-white aspect-[9/19.5]">
+                <div className="rounded-[2.8rem] overflow-hidden bg-white aspect-[9/19.5]">
                   <img 
-                    src="/assets/hero-app.jpg" 
+                    src="/assets/home.jpg" 
+                    className="w-full h-full object-cover" 
                     alt="Cal Trek App" 
-                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
-              
               {/* Floating UI Badges */}
               <motion.div
                 animate={{ y: [0, -15, 0] }}
