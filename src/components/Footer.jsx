@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid lg:grid-cols-4 gap-12 lg:gap-8 mb-20">
           <div className="col-span-1 lg:col-span-2">
             <div className="flex items-center gap-3 mb-8">
-              <img src="assets/logo.png" className="w-10 h-10 rounded-xl object-contain" alt="Cal Trek" />
+              <img src={`${import.meta.env.BASE_URL}assets/logo.png`} className="w-10 h-10 rounded-xl object-contain" alt="Cal Trek" />
               <span className="text-2xl font-black tracking-tighter text-black uppercase">CAL TREK</span>
             </div>
             <p className="text-gray-400 max-w-sm leading-relaxed font-medium">

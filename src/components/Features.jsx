@@ -9,19 +9,19 @@ const Features = () => {
     {
       title: "AI Food Recognition",
       description: "Just point your camera. Our advanced neural network identifies 5,000+ foods instantly with 98% accuracy.",
-      image: "assets/scanner.jpg",
+      image: `${import.meta.env.BASE_URL}assets/scanner.jpg`,
       icon: <Scan className="text-blue-500" />
     },
     {
       title: "Real-time Macro Breakdown",
       description: "Get detailed protein, carb, and fat analyses formatted specifically to help you reach your daily goals.",
-      image: "assets/details.jpg",
+      image: `${import.meta.env.BASE_URL}assets/details.jpg`,
       icon: <Zap className="text-yellow-500" />
     },
     {
       title: "Progress Visualization",
       description: "Track your transformation with beautiful, data-rich charts and a personalized goal journey.",
-      image: "assets/progress.jpg",
+      image: `${import.meta.env.BASE_URL}assets/progress.jpg`,
       icon: <TrendingUp className="text-purple-500" />
     }
   ];
