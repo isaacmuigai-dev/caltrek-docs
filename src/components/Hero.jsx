@@ -84,7 +84,7 @@ const Hero = () => {
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-neutral-800 rounded-b-2xl z-20" />
                 <div className="rounded-[2.8rem] overflow-hidden bg-white aspect-[9/19.5]">
                   <img 
-                    src="/assets/home.jpg" 
+                    src="assets/home.jpg" 
                     className="w-full h-full object-cover" 
                     alt="Cal Trek App" 
                   />

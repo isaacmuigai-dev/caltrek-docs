@@ -32,7 +32,7 @@ const Navbar = () => {
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center gap-3"
         >
-          <img src="/assets/logo.png" className="w-8 h-8 rounded-lg object-contain" alt="Cal Trek" />
+          <img src="assets/logo.png" className="w-8 h-8 rounded-lg object-contain" alt="Cal Trek" />
           <span className="text-xl font-black tracking-tighter text-black">CAL TREK</span>
         </motion.div>
 

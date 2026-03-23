@@ -7,7 +7,7 @@ const InteractiveDemo = () => {
   const [activeFood, setActiveFood] = useState(0);
 
   const foods = [
-    { name: "3 Fried Eggs Plate", calories: 1189, protein: 85, carbs: 29, fat: 87, image: "/assets/scanner.jpg" },
+    { name: "3 Fried Eggs Plate", calories: 1189, protein: 85, carbs: 29, fat: 87, image: "assets/scanner.jpg" },
     { name: "Greek Salad bowl", calories: 342, protein: 12, carbs: 18, fat: 24, image: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&h=400&fit=crop" },
     { name: "Grilled Salmon Plate", calories: 485, protein: 42, carbs: 0, fat: 34, image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=400&fit=crop" }
   ];
