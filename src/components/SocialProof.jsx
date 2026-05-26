@@ -13,7 +13,7 @@ const SocialProof = () => {
     {
       name: "Marcus J.",
       handle: "@marcusfit",
-      text: "AmiPal is actually magic. I just snap a photo of my meal and it does the rest. No more manual searching.",
+      text: "CalTrek is actually magic. I just snap a photo of my meal and it does the rest. No more manual searching.",
       avatar: "https://i.pravatar.cc/100?u=marcus"
     },
     {
@@ -47,7 +47,7 @@ const SocialProof = () => {
           <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-4">
             Join the <span className="text-blue-600">elite league</span> of trackstars.
           </h2>
-          <p className="text-xl text-gray-400 font-medium">10,000+ people are transforming their lives with AmiPal.</p>
+          <p className="text-xl text-gray-400 font-medium">10,000+ people are transforming their lives with CalTrek.</p>
         </div>
 
         {/* Stats */}

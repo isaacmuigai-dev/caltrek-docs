@@ -86,7 +86,7 @@ const Hero = () => {
                   <img 
                     src={`${import.meta.env.BASE_URL}assets/home.jpg`} 
                     className="w-full h-full object-cover" 
-                    alt="AmiPal App" 
+                    alt="CalTrek App" 
                   />
                 </div>
               </div>
@@ -132,3 +132,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

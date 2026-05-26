@@ -32,7 +32,7 @@ function App() {
               className="relative"
             >
               <div className="w-20 h-20 border-4 border-black/5 border-t-blue-500 rounded-full animate-spin" />
-              <img src={`${import.meta.env.BASE_URL}assets/logo.png`} className="absolute inset-0 m-auto w-10 h-10 rounded-xl" alt="AmiPal" />
+              <img src={`${import.meta.env.BASE_URL}assets/logo.png`} className="absolute inset-0 m-auto w-10 h-10 rounded-xl" alt="CalTrek" />
             </motion.div>
           </motion.div>
         )}
@@ -60,3 +60,4 @@ function App() {
 }
 
 export default App;
+

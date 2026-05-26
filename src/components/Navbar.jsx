@@ -32,8 +32,8 @@ const Navbar = () => {
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center gap-3"
         >
-          <img src={`${import.meta.env.BASE_URL}assets/logo.png`} className="w-8 h-8 rounded-lg object-contain" alt="AmiPal" />
-          <span className="text-xl font-black tracking-tighter text-black">AmiPal</span>
+          <img src={`${import.meta.env.BASE_URL}assets/logo.png`} className="w-8 h-8 rounded-lg object-contain" alt="CalTrek" />
+          <span className="text-xl font-black tracking-tighter text-black">CalTrek</span>
         </motion.div>
 
         {/* Desktop Nav */}

@@ -68,7 +68,7 @@ const Transformation = () => {
               <span className="text-blue-600">inevitable.</span>
             </h2>
             <p className="text-xl text-gray-500 font-medium mb-12 leading-relaxed max-w-xl mx-auto lg:mx-0 italic">
-              "We don't just track calories; we build sustainable habits. AmiPal provides the clarity you need to master your nutrition."
+              "We don't just track calories; we build sustainable habits. CalTrek provides the clarity you need to master your nutrition."
             </p>
             
             <div className="space-y-8 mb-12 max-w-sm mx-auto lg:mx-0">

@@ -8,8 +8,8 @@ const Footer = () => {
         <div className="grid lg:grid-cols-4 gap-12 lg:gap-8 mb-20">
           <div className="col-span-1 lg:col-span-2">
             <div className="flex items-center gap-3 mb-8">
-              <img src={`${import.meta.env.BASE_URL}assets/logo.png`} className="w-10 h-10 rounded-xl object-contain" alt="AmiPal" />
-              <span className="text-2xl font-black tracking-tighter text-black uppercase">AmiPal</span>
+              <img src={`${import.meta.env.BASE_URL}assets/logo.png`} className="w-10 h-10 rounded-xl object-contain" alt="CalTrek" />
+              <span className="text-2xl font-black tracking-tighter text-black uppercase">CalTrek</span>
             </div>
             <p className="text-gray-400 max-w-sm leading-relaxed font-medium">
               Elite AI-powered nutrition tracking for those who demand excellence. Built to make transformation effortless.
@@ -37,7 +37,7 @@ const Footer = () => {
 
         <div className="pt-12 border-t border-black/5 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-gray-400 text-xs font-bold uppercase tracking-widest">
-            &copy; {new Date().getFullYear()} AmiPal AI. ALL RIGHTS RESERVED.
+            &copy; {new Date().getFullYear()} CalTrek AI. ALL RIGHTS RESERVED.
           </div>
           
           <div className="flex items-center gap-8">
@@ -53,3 +53,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
