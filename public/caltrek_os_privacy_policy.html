@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - CalTrek OS (Gym Management & POS)</title>
+    <title>Privacy Policy - FrontAlly OS: Gym POS & CRM (CalTrek OS)</title>
     <style>
         :root {
             --primary-color: #D50000;
@@ -23,7 +23,7 @@
             background-color: var(--bg-color);
         }
         .container {
-            max-width: 840px;
+            max-width: 860px;
             margin: 2rem auto;
             padding: 2.5rem;
             background-color: var(--card-bg);
@@ -67,7 +67,7 @@
             color: var(--muted-text);
             font-size: 0.98rem;
         }
-        ul {
+        ul, ol {
             padding-left: 1.5rem;
         }
         li {
@@ -104,6 +104,49 @@
             color: #374151;
             font-weight: 500;
         }
+        .deletion-box {
+            background-color: #FEF2F2;
+            border: 2px solid #F87171;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .deletion-box h3 {
+            color: #991B1B;
+            margin-top: 0;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.92rem;
+        }
+        .data-table th, .data-table td {
+            border: 1px solid var(--border-color);
+            padding: 10px 14px;
+            text-align: left;
+        }
+        .data-table th {
+            background-color: #F3F4F6;
+            color: #111827;
+            font-weight: 700;
+        }
+        .data-table td {
+            color: #4B5563;
+        }
+        .action-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #FFFFFF !important;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none !important;
+            margin-top: 0.75rem;
+        }
+        .action-button:hover {
+            background-color: var(--primary-dark);
+        }
         footer {
             margin-top: 3rem;
             padding-top: 1.5rem;
@@ -116,113 +159,142 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">&larr; Back to CalTrek</a>
+        <a href="index.html" class="back-link">&larr; Back to Documentation</a>
         
-        <div class="badge">Privacy Policy</div>
-        <h1>Privacy Policy for CalTrek OS</h1>
-        <p><strong>Effective Date: September 8, 2026</strong> | <strong>Last Updated: September 8, 2026</strong></p>
-
-        <p>This Privacy Policy explains how <strong>CalTrek OS</strong> ("we", "us", or "our") collects, uses, stores, and protects information when gym owners, operators, managers, staff, and their authorized users access our mobile and tablet management application (the "App").</p>
+        <div class="badge">Official Privacy Policy & Data Declaration</div>
+        <h1>Privacy Policy for FrontAlly OS (CalTrek OS)</h1>
+        <p><strong>Application:</strong> FrontAlly OS: Gym POS & CRM (CalTrek Fitness Center Operating System)<br>
+        <strong>Package ID:</strong> <code>com.frontallyos.app</code><br>
+        <strong>Effective Date:</strong> September 8, 2026 | <strong>Last Updated:</strong> September 21, 2026</p>
 
         <div class="callout">
-            <p>Summary: CalTrek OS is a B2B gym management and Point of Sale (POS) solution. We do not sell your data or your members' data, and we do not display third-party advertisements.</p>
+            <p>Summary: FrontAlly OS (CalTrek OS) is a gym management, membership tracking, and Point of Sale (POS) solution. We do not sell user or member data, and we do not display third-party advertisements.</p>
         </div>
 
-        <h2>1. Information We Collect</h2>
+        <p>This Privacy Policy describes how <strong>FrontAlly OS</strong> ("we", "us", or "our") collects, uses, stores, and protects information when gym owners, operators, managers, front desk staff, and registered fitness center members access our mobile operating system (the "App").</p>
 
-        <h3>A. Account & Authentication Information</h3>
-        <p>When you register or sign in as a gym administrator or staff member, we collect:</p>
+        <p>We process personal data in strict compliance with the <strong>Kenya Data Protection Act (2019)</strong>, the <strong>General Data Protection Regulation (GDPR)</strong>, and <strong>Google Play Developer Policies</strong>.</p>
+
+        <h2>1. Information We Collect (Google Play Data Safety: 5 Data Types)</h2>
+        <p>In accordance with Google Play Data Safety requirements, FrontAlly OS collects and processes <strong>5 specific data types</strong> strictly to provide gym operating functionality:</p>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Data Category</th>
+                    <th>Specific Elements</th>
+                    <th>Operational Purpose</th>
+                    <th>Handling & Sharing</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1. Personal Info</strong></td>
+                    <td>Name, Phone Number, Email Address, Member ID</td>
+                    <td>Administrative authentication (Google OAuth), member registration, issuing digital QR check-in tokens, renewal notifications via SMS/WhatsApp.</td>
+                    <td>Collected for app functionality; <strong>Never sold or shared with advertisers</strong>.</td>
+                </tr>
+                <tr>
+                    <td><strong>2. Photos & Videos</strong></td>
+                    <td>Member Profile Portrait Photos</td>
+                    <td>Captured via CameraX during member intake to visually verify member identity at the front desk and prevent pass-sharing fraud.</td>
+                    <td>Stored securely on Google Cloud Storage with encrypted access.</td>
+                </tr>
+                <tr>
+                    <td><strong>3. Financial Info</strong></td>
+                    <td>M-Pesa Transaction Codes, Cash Amounts, Payment Receipts, Subscription Validity</td>
+                    <td>Recording plan subscriptions, settling arrears, reconciling Equity Paybill 247247 transactions, POS retail receipts.</td>
+                    <td>Collected for accounting and subscription extension. <strong>No credit card numbers or PINs stored.</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>4. App Info & Performance</strong></td>
+                    <td>Crash Logs, UI Rendering Speeds, Network Timings</td>
+                    <td>Firebase Crashlytics & Firebase Performance Monitoring to maintain high app stability, identify crashes, and track Firestore latency.</td>
+                    <td>Collected automatically as anonymized diagnostic telemetry.</td>
+                </tr>
+                <tr>
+                    <td><strong>5. Device or Other IDs</strong></td>
+                    <td>Firebase App Installation Token, Session Tokens</td>
+                    <td>Cryptographic session verification, offline cache synchronization, and push notifications for administrative alerts.</td>
+                    <td>Collected for authentication and operational security.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>2. Camera & Hardware Permissions</h2>
+        <p>FrontAlly OS requests <code>android.permission.CAMERA</code> for two primary operational tasks:</p>
         <ul>
-            <li><strong>Personal Contact Information</strong>: Your name, business email address, and business phone number.</li>
-            <li><strong>Authentication Credentials</strong>: Encrypted credentials managed securely through Firebase Authentication.</li>
-            <li><strong>Facility Details</strong>: Gym/facility business name, location branch name, and operational currency settings.</li>
+            <li><strong>Member Intake Portrait Snap (CameraX):</strong> Gym staff capture a member portrait photo during onboarding. The image is uploaded securely to Google Cloud Storage to display on the member dossier card for identity verification.</li>
+            <li><strong>Digital QR Pass & Barcode Scanner:</strong> The camera scans member QR passes and barcode badges at the reception desk and turnstiles. Video frames are analyzed locally in volatile memory via Google ML Kit Barcode Vision. <em>Video frames are never saved, streamed, or uploaded.</em></li>
+            <li><strong>Hardware Declaration:</strong> Camera hardware is declared with <code>android:required="false"</code>. Facilities without camera hardware can manually check in members by name, phone number, or ID.</li>
         </ul>
 
-        <h3>B. Facility Operations & Member Records</h3>
-        <p>To enable the App's core management functionality, gym administrators and staff input and manage customer records:</p>
+        <h2>3. Financial Records & M-Pesa Integration</h2>
         <ul>
-            <li><strong>Member Directory</strong>: Member names, contact phone numbers, email addresses, emergency contacts, and assigned membership plan tiers.</li>
-            <li><strong>Attendance & Check-Ins</strong>: Barcode or manual check-in timestamps, visit counters, and active session status.</li>
-            <li><strong>CRM & Lead Pipeline</strong>: Prospective member names, lead status (e.g., walk-in, tour booked, trial active, joined), and follow-up notes.</li>
-            <li><strong>Staff & Shift Records</strong>: Staff credentials, role assignments (Admin, Receptionist, Trainer), shift check-ins, and activity logs.</li>
+            <li><strong>M-Pesa Paybill & STK Push Reconciliation:</strong> The app connects with Safaricom Daraja and Equity Paybill 247247 webhooks to verify payment codes, match paying members by phone, and automatically extend memberships.</li>
+            <li><strong>Ledger Immutability:</strong> All payment records stored in Firestore are strictly immutable (enforced by Firestore Security Rules: <code>allow update, delete: if false;</code>) to prevent tampering.</li>
+            <li><strong>Zero Sensitive Financial Data:</strong> FrontAlly OS <strong>never</strong> collects, handles, or stores credit/debit card numbers, CVVs, bank account passwords, or M-Pesa PINs.</li>
         </ul>
 
-        <h3>C. Financial & Transaction Records</h3>
+        <h2>4. Zero Third-Party Advertising</h2>
+        <p>FrontAlly OS is an enterprise operating tool funded strictly through gym subscriptions. <strong>We do not embed third-party advertising SDKs (such as AdMob), tracker pixels, or behavioral marketing brokers.</strong> The Android Advertising ID is not used for advertising or cross-app tracking.</p>
+
+        <h2>5. Data Storage, Security & Offline-First Architecture</h2>
         <ul>
-            <li><strong>Subscription Billing</strong>: Subscriptions for accessing CalTrek OS Pro features are processed directly through <strong>Google Play In-App Billing</strong>. We do not receive or store your credit card or bank account numbers.</li>
-            <li><strong>Local Point of Sale (POS) Records</strong>: In-app transaction logs (membership renewal fees, day passes, personal training sessions, and retail purchases) recorded by staff at the front desk.</li>
+            <li><strong>Encryption in Transit:</strong> TLS 1.3 cryptographic protection for all network communication between the mobile client and Google Cloud Firestore.</li>
+            <li><strong>Encryption at Rest:</strong> AES-256 cloud encryption across all Firestore database documents and Google Cloud Storage buckets.</li>
+            <li><strong>Access Control:</strong> Google OAuth authentication with single-owner administrator verification ensures only authorized staff access member dossiers.</li>
+            <li><strong>Local Cache Persistence:</strong> Offline Room SQLite caching is stored exclusively in the device's private, sandboxed app directory.</li>
         </ul>
 
-        <h3>D. Technical & Diagnostic Information</h3>
-        <p>We automatically collect diagnostic telemetry to ensure app stability and prevent crashes:</p>
-        <ul>
-            <li><strong>Device Attributes</strong>: Device model, operating system version, and system language.</li>
-            <li><strong>Diagnostics & Crash Logs</strong>: Crash logs and performance diagnostics collected via <strong>Google Firebase Crashlytics</strong>.</li>
-            <li><strong>Push Notification Tokens</strong>: Device tokens via <strong>Firebase Cloud Messaging (FCM)</strong> for urgent staff alerts and operational notifications.</li>
-        </ul>
+        <!-- MANDATORY GOOGLE PLAY DATA & ACCOUNT DELETION SECTION -->
+        <div class="deletion-box" id="account-deletion">
+            <h3>6. Data Retention & Account Deletion Policy (Google Play Compliance)</h3>
+            <p>In adherence to Google Play's <strong>User Data and Account Deletion Policy</strong>, the Kenya Data Protection Act (2019), and GDPR, gym members, staff, and administrators have the complete right to request the permanent deletion of their account and all associated personal data.</p>
 
-        <h2>2. How We Use Your Information</h2>
-        <p>We use the collected information solely for operational and service delivery purposes:</p>
-        <ul>
-            <li>To operate the member check-in counter, membership plans, and POS checkout.</li>
-            <li>To maintain your facility's CRM pipeline, lead tracking, and tour scheduling.</li>
-            <li>To provide reliable offline functionality via local device caching (Room DB) with automatic cloud synchronization.</li>
-            <li>To manage multi-branch operational analytics and reporting for head office administration.</li>
-            <li>To diagnose bugs, technical crashes, and improve application responsiveness.</li>
-        </ul>
-
-        <h2>3. Data Storage, Security & Offline-First Architecture</h2>
-        <ul>
-            <li><strong>Encryption in Transit</strong>: All data exchanged between the App and our backend servers is encrypted using modern Transport Layer Security (TLS / HTTPS).</li>
-            <li><strong>Cloud Infrastructure</strong>: Cloud data is hosted and managed using <strong>Google Cloud Platform and Firebase Firestore</strong> with enterprise-grade security and strict access controls.</li>
-            <li><strong>Local Caching</strong>: Operational data is cached securely in an encrypted local database (Room DB) on your device to ensure continuous front-desk operations during internet outages.</li>
-        </ul>
-
-        <h2>4. Data Sharing & Third Parties</h2>
-        <p><strong>We never sell, rent, or monetize your data or your members' data.</strong> Data is shared only with trusted infrastructure service providers strictly to deliver the App's services:</p>
-        <ul>
-            <li><strong>Google Cloud & Firebase</strong>: For cloud database hosting, authentication, crash diagnostics, and notifications.</li>
-            <li><strong>Google Play Billing</strong>: For secure processing of app subscription plans.</li>
-            <li><strong>Legal Compliance</strong>: If required by law, subpoena, or valid regulatory authority.</li>
-        </ul>
-
-        <h2>5. No Third-Party Advertising</h2>
-        <p>CalTrek OS is funded exclusively through software subscriptions. <strong>We do not embed third-party advertising networks (e.g., AdMob), tracker beacons, or behavioral data brokers.</strong></p>
-
-        <div id="account-deletion">
-            <h2>6. Account & Data Deletion Policy</h2>
-            <p>At <strong>CalTrek OS</strong> (developed by <strong>isaacmuigai-dev</strong>), we respect your right to manage and delete your personal and business data. You have full control over your account and associated records:</p>
-            
-            <h3>How to Request Account & Data Deletion</h3>
-            <p>Users and gym administrators can request the complete deletion of their account and all associated data through either of the following methods:</p>
+            <h4>Method A: In-App Immediate Deletion (Self-Service)</h4>
+            <p>Gym administrators and authorized staff can permanently delete any member record directly inside the App:</p>
             <ol>
-                <li><strong>In-App Deletion</strong>: Navigate to <em>Settings &gt; Account Security &gt; Delete Account</em> within the CalTrek OS / FrontAlly app.</li>
-                <li><strong>Web / Email Request</strong>: Send an email from your registered business email address to <a href="mailto:isaacmuigai.dev@gmail.com">isaacmuigai.dev@gmail.com</a> with the subject line <em>"Account Deletion Request - [Your Gym/Business Name]"</em>.</li>
+                <li>Open <strong>FrontAlly OS</strong> on your device.</li>
+                <li>Navigate to the <strong>Member Hub</strong> tab.</li>
+                <li>Select the member's profile card to open the <strong>Member Dossier</strong>.</li>
+                <li>Scroll to the bottom of the dossier and tap the red <strong>"Delete Member Record"</strong> button.</li>
+                <li>Confirm by tapping <strong>"Delete Permanently"</strong> in the confirmation dialog.</li>
+                <li><strong>Result:</strong> The member profile, phone number, photo, digital QR pass, and any assigned lockers are immediately and permanently erased from the live database.</li>
             </ol>
 
-            <h3>Data Types Deleted</h3>
-            <p>Upon receiving and verifying your deletion request, the following data is permanently purged from our servers within <strong>30 calendar days</strong>:</p>
-            <ul>
-                <li><strong>Authentication Records</strong>: User profile, email address, password hashes, and Firebase Auth UID.</li>
-                <li><strong>Facility & Staff Data</strong>: Gym facility configurations, branch assignments, and staff accounts.</li>
-                <li><strong>Member Records</strong>: All customer directory profiles, emergency contacts, and personal information.</li>
-                <li><strong>Attendance & Check-In History</strong>: All check-in timestamps, visit logs, and attendance counters.</li>
-            </ul>
+            <h4>Method B: Web-Based Data Deletion Request (No App Reinstallation Required)</h4>
+            <p>If you are a member, former staff member, or gym operator who wishes to have your personal data, credentials, or entire gym account permanently deleted without opening the app, you may submit a deletion request online:</p>
+            
+            <p>
+                <a href="mailto:isaacmuigai.dev@gmail.com?subject=[FrontAllyOS%20Data%20Deletion%20Request]&body=Hello,%20I%20request%20the%20permanent%20deletion%20of%20my%20account%20and%20personal%20data%20from%20FrontAlly%20OS.%0A%0AFull%20Name:%0APhone%20Number:%0AEmail:%0AGym%20Facility:%20CalTrek%20Fitness%20Center%0A" class="action-button">
+                    Submit Account & Data Deletion Request via Email
+                </a>
+            </p>
+            <p style="font-size: 0.9rem; color: #7F1D1D; margin-top: 0.5rem;">
+                Direct Email: <strong>isaacmuigai.dev@gmail.com</strong>
+            </p>
 
-            <h3>Data Retention Exceptions</h3>
-            <p>No personal user data is retained after account deletion. Aggregated, non-identifiable system performance analytics and tax/accounting transaction receipts may be retained solely for the statutory period required by local fiscal laws (up to 7 years), after which they are permanently destroyed.</p>
+            <h4>Deletion Timelines & Data Handling</h4>
+            <ul>
+                <li><strong>Personal Data Purged:</strong> Member name, phone number, email, portrait photo, digital QR token, fitness assessment notes, and locker assignments are permanently purged within 48 hours of request verification.</li>
+                <li><strong>Authentication Credentials:</strong> Associated Firebase Auth credentials and session tokens are revoked and deleted.</li>
+                <li><strong>Financial Records Retention:</strong> Transaction codes and cash amounts may be retained in an anonymized format strictly as required by Kenyan commercial tax laws and accounting audit regulations.</li>
+            </ul>
         </div>
 
-        <h2>7. Contact Us</h2>
-        <p>If you have any questions or concerns regarding this Privacy Policy or your data, please contact us at:</p>
+        <h2>7. Contact Information</h2>
+        <p>If you have any questions, concerns, or inquiries regarding this Privacy Policy or your personal data, please contact our Lead Systems Administrator & Developer:</p>
         <p>
-            <strong>CalTrek Support Team</strong><br>
+            <strong>Isaac Muigai</strong><br>
+            Developer & Data Controller, FrontAlly OS<br>
             Email: <a href="mailto:isaacmuigai.dev@gmail.com">isaacmuigai.dev@gmail.com</a><br>
-            Developer Website: <a href="https://isaacmuigai-dev.github.io/caltrek-docs/" target="_blank">https://isaacmuigai-dev.github.io/caltrek-docs/</a>
+            Documentation Website: <a href="https://isaacmuigai-dev.github.io/caltrek-docs/" target="_blank">https://isaacmuigai-dev.github.io/caltrek-docs/</a><br>
+            Facility: CalTrek Fitness Center, Nairobi, Kenya
         </p>
 
         <footer>
-            &copy; 2026 CalTrek. All rights reserved.
+            &copy; 2026 FrontAlly OS & CalTrek Fitness Center. All rights reserved.
         </footer>
     </div>
 </body>
